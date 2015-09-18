@@ -5,6 +5,7 @@
 As Earshot has grown the number of locations our customers want to access in a single campaign has grown - a lot. Our prior designs only comtemplated a max of 20 locations. We have a new customer who wants to target 307 7-11 locations in the US. We need to redesign our location selection dialog to support this new use case.
 
 **Design:**
+
 Our designer was so kind as to provide us with a design for this dialog:
 ![location_selection](https://cloud.githubusercontent.com/assets/213594/9950318/f053ed1a-5d7e-11e5-9777-f9a61e6d6ad5.png)
 
