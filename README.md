@@ -46,6 +46,6 @@ Your challenge is to implement this UI
 
 - `locations.json` - a file containing 307 locations of 7-11s in the US
 - The same contents of `locations.json` [hosted on S3](https://s3.amazonaws.com/public.earshotinc.com/locations.json). This will allow you to make a request to an actual website to load the data. CORS is enabled on the Bucket for all origins.
-- Unlimted email support :smile:
+- Unlimited email support :smile:
 
 We are looking forward to seeing what you can do. Please let us know if you have any questions
