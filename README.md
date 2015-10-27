@@ -37,10 +37,7 @@ Your challenge is to implement this UI
 - Ability to shrink UI to be a single column of states without a map
 - Selected locations display in a map with a red pin
 - Unselected locations display in a map with a grey pin
-- Collapse/expand a state (not shown in design)
 - "Show Selected" zooms map to show all selected locations
-- "Search as I move the map" filters locations to be based what locations are visible in the map
-- Any other features you feel would be useful given the use case
 
 **In addition to this design, we are giving you:**
 
@@ -48,4 +45,4 @@ Your challenge is to implement this UI
 - The same contents of `locations.json` [hosted on S3](https://s3.amazonaws.com/public.earshotinc.com/locations.json). This will allow you to make a request to an actual website to load the data. CORS is enabled on the Bucket for all origins.
 - Unlimited email support :smile:
 
-We are looking forward to seeing what you can do. Please let us know if you have any questions
+You will be evaluated primarily on your solution's cleanliness and extensibility. We intend for this task to only take a few hours and would prefer to see clean, well tested, production-worthy code than a complete implementation of every feature. Consider how you would extend your solution to implement additional features. 
