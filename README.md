@@ -14,12 +14,11 @@ Your challenge is to implement this UI
 **General guidelines and requirements:**
 
 - You will need to provide an html file that will display a functioning dialog
-- Please show the dialog working as a dropdown and hosted inline of a web page
 - You can use any JS/CSS framework/3rd party library you'd like to help with this
 - You only need to support the latest version of Chrome on a Mac Book
 - Bonus points if design functions on other browsers/OSes
 - The minimum pixel width that needs to be supported is 320px wide
-- Pin graphics don't need to match the design exactly
+- Graphics don't need to match the design exactly
 - If you feel automated testing would help here, feel free to add it
 
 **Features required (in order of priority):**
