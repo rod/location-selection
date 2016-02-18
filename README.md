@@ -29,7 +29,6 @@ Your challenge is to implement this UI
 - Select All/Deselect All function as expected
 - Clicking "Add" Button displays ids and names of selected locations on page
 - # of selected locations displayed
-- Dialog works as a pop up and hosted in page
 - Select All works for a state
 - Ability to expand UI to be 2 columns of states plus the map
 - Ability to expand UI to be 4 columns of states without the map
