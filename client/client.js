@@ -23,11 +23,11 @@ Template.body.events ({
   }
 });
 
-Template.story.helpers ({
-  isOwner: function() {
-    return this.owner === Meteor.userId();
-  }
-});
+// Template.story.helpers ({
+//   isOwner: function() {
+//     return this.owner === Meteor.userId();
+//   }
+// });
 
 Template.story.events ({
   'click #delete': function() {

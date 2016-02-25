@@ -3,7 +3,6 @@ accounts-facebook@1.0.6
 accounts-oauth@1.1.8
 accounts-password@1.1.4
 accounts-twitter@1.0.6
-accounts-ui@1.1.6
 accounts-ui-unstyled@1.1.8
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
@@ -32,6 +31,7 @@ email@1.0.8
 es5-shim@4.1.14
 facebook@1.2.2
 fastclick@1.0.7
+fourseven:scss@3.4.1
 geojson-utils@1.0.4
 hot-code-push@1.0.0
 html-tools@1.0.5
