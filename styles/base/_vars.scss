@@ -1,0 +1,13 @@
+// color
+$color-black: #333;
+$color-white: #fafafa;
+$color-gray : lighten($color-black, 40%);
+
+// base
+$base-color      : $color-black;
+$base-bg         : $color-white;
+$base-font-size  : 1em;
+$base-line-height: 1.5;
+
+// rhythm
+$unit: 1.5em;
