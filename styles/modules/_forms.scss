@@ -1,0 +1,15 @@
+input[type='search'] {
+  box-sizing: border-box;
+  display: block;
+  padding: $unit-s;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.search {
+  margin: 0 0 $unit-s;
+}

@@ -1,7 +1,8 @@
 // color
 $color-black: #333;
 $color-white: #fafafa;
-$color-gray : lighten($color-black, 40%);
+$color-gray : #eee;
+$color-blue : #0086DC;
 
 // base
 $base-color      : $color-black;
@@ -10,4 +11,11 @@ $base-font-size  : 1em;
 $base-line-height: 1.5;
 
 // rhythm
-$unit: 1.5em;
+$unit   : 1em;
+$unit-s : $unit / 2;
+$unit-xs: $unit / 4;
+$unit-l : $unit * 2;
+$unit-xl: $unit * 4;
+
+// mqs
+$tablet: 36rem;

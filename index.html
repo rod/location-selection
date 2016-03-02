@@ -1,34 +1,68 @@
-<html>
+<html ng-app="app" ng-controller="AppCtrl">
   <head>
-    <meta name="viewport" content="width=initial-width, initial-scale=1">
-    <title>location selection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Location</title>
     <meta name="description" content="lorem ipsum">
 
     <!-- styles -->
     <link rel="stylesheet" href="styles/main.css" media="screen" title="no title" charset="utf-8">
   </head>
+
   <body>
-    <h1>Select Locations</h1>
-    <div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
-        var myLatLng = {lat: -25.363, lng: 131.044};
+    <header>
+      <div class="header-tools">
+        <form class="search">
+          <label for="search">Select Locations</label>
+          <input type="search" name="search" ng-model="search" placeholder="Search">
+        </form>
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: myLatLng
-        });
+        <p class="select-tools">
+          <small class="link" ng-click="mapLocations()">Show Selected ({{checkCount}})</small>
+          <small class="link" ng-click="checkAll(true)">Select All</small> /
+          <small class="link" ng-click="checkAll(false)">Deselect All</small>
+        </p>
+      </div>
 
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Hello World!'
-        });
-      }
-    </script>
+      <div class="header-actions">
+        <button class="btn btn-disabled">Cancel</button>
+        <button class="btn" ng-click="addChecked()">Add</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="locations">
+        <ul class="unstyled states">
+          <li class="state" ng-repeat="(state, name) in locations | orderBy: 'state' | groupBy: 'state'">
+            <div class="title">
+              <b>{{state}}</b>
+              <small class="link" ng-click="checkState(true)">Select All</small>
+            </div>
+
+            <ul class="unstyled cities">
+              <li class="city" ng-repeat="location in name | orderBy: 'address' | filter: search">
+                <input type="checkbox" ng-model="location.checked">
+                <label>
+                  <h4>{{location.address}}</h4>
+                  <p>{{location.city}}, {{location.state}}</p>
+                  {{showInfo}}
+                  <p ng-show="showInfo">{{location.name}} ({{location.id}})</p>
+                </label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="map">
+        <div id="map"></div>
+      </section>
+    </main>
+
+
     <!-- scripts -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7g1eC41YSnrWg9BQ723d_oU_hRa0cARE&callback=initMap"
-    async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7g1eC41YSnrWg9BQ723d_oU_hRa0cARE&callback=initMap"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
+    <script src="app.js" type="text/javascript"></script>
   </body>
 </html>

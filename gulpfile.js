@@ -5,7 +5,7 @@ var browserSync  = require('browser-sync').create();
 
 // compile sass w/ vendor prefixes
 gulp.task('styles', function() {
-  return gulp.src('./styles/main.scss')
+  return gulp.src('./styles/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest('./styles'))

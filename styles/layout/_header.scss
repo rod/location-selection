@@ -1,0 +1,28 @@
+header {
+  border-bottom: 1px solid $color-gray;
+  
+  @include breakpoint($tablet) {
+    display: flex;
+    flex: auto;
+    height: 10em;
+  }
+
+  .select-tools {
+    font-weight: bold;
+  }
+}
+
+.header-tools,
+.header-actions {
+  padding: $unit;
+
+  @include breakpoint($tablet) {
+    flex: 1;
+  };
+}
+
+.header-actions {
+  @include breakpoint($tablet) {
+    text-align: right;
+  };
+}

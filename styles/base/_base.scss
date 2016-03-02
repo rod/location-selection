@@ -18,3 +18,26 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
 }
+
+main {
+  @include breakpoint($tablet) {
+    display: flex;
+    height: calc(100% - 10em);
+  };
+
+  .locations,
+  .map {
+    @include breakpoint($tablet) {
+      flex: 1;
+      height: 100%;
+      overflow: scroll;
+    }
+  }
+}
+
+a,
+.link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}

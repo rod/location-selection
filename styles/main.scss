@@ -3,11 +3,12 @@
 @import 'base/vars';
 @import 'base/mixins';
 @import 'base/base';
-@import 'base/typography';
 
 // layout
 @import 'layout/header';
 
 // modules
+@import 'modules/buttons';
+@import 'modules/forms';
 @import 'modules/lists';
 @import 'modules/map';

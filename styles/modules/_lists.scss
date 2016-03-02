@@ -1,0 +1,57 @@
+.unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.locations {
+  .states {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .state {
+    flex: 1;
+
+    .title {
+      background: $color-gray;
+      padding: $unit;
+    }
+
+    .link {
+      float: right;
+    }
+  }
+
+  .cities {
+    padding: 0 $unit;
+  }
+
+  .city {
+    border-bottom: 1px solid $color-gray;
+    padding: $unit 0;
+    position: relative;
+
+    h4, p {
+      margin: 0;
+    }
+
+    p {
+      font-size: $base-font-size * .7;
+    }
+
+    input {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    label {
+      margin-left: $unit-l;
+      font-weight: normal
+    }
+  }
+}
