@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Send secret messages all 1776 style">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cardan Grille</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <h1>Cardan Grille</h1>
+    </header>
+
+    <form>
+      <fieldset class="form-group">
+        <label for="">Message</label>
+        <input type="text" id="message">
+      </fieldset>
+
+      <input type="submit" value="Encode">
+    </form>
+
+    <div id="codedMessage"></div>
+    <button id="toggle">Toggle Grille</button>
+
+    <footer class="footer">
+      <p>Made with &hearts; in Chicago</p>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
