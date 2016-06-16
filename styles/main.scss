@@ -1,6 +1,6 @@
 @import 'normalize';
 
-$white: #fafafa;
+$white: #fff;
 $black: #222;
 $transition: all 0.3s ease-in;
 
@@ -74,6 +74,7 @@ input,
 textarea,
 .btn {
   border: 1px solid $white;
+  border-radius: 0;
   background: transparent;
   color: $white;
   padding: 1em;
