@@ -1,7 +1,7 @@
 @import 'normalize';
 
 $white: #fafafa;
-$blue: #34495e;
+$black: #222;
 $transition: all 0.3s ease-in;
 
 html {
@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background: $blue;
+  background: $black;
   color: $white;
   font-family: monospace;
   -webkit-font-smoothing: antialiased;
@@ -27,7 +27,7 @@ a:visited {
 
   &:hover {
     background: $white;
-    color: $blue;
+    color: $black;
   }
 }
 
@@ -38,13 +38,14 @@ main {
   width: 100%;
 }
 
-header {
+header,
+footer {
   text-align: center;
   margin: 4em 0;
+}
 
-  p {
-    font-size: 1.2em;
-  }
+footer {
+  border-top: 1px solid $white;
 }
 
 form {
@@ -87,7 +88,7 @@ textarea,
 
   &:hover {
     background: $white;
-    color: $blue;
+    color: $black;
   }
 }
 
@@ -100,6 +101,10 @@ textarea,
   transition: $transition;
 
   span {
-    background: $blue;
+    background: $black;
   }
+}
+
+.lead {
+  font-size: 1.2em;
 }
