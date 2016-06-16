@@ -12,8 +12,8 @@ gulp.task('styles', () => {
       outputStyle: 'compressed'
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer())
-    .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('./styles/'))
+    .pipe($.sourcemaps.write('.'))
+    .pipe(gulp.dest('./styles'))
     .pipe(browserSync.stream());
 });
 
@@ -21,8 +21,7 @@ gulp.task('scripts', () => {
   return gulp.src('./scripts/**/*.js')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
-    .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('./'))
+    .pipe($.sourcemaps.write('/.'))
     .pipe(browserSync.stream());
 });
 

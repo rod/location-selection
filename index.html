@@ -4,41 +4,59 @@
     <meta charset="utf-8">
     <meta name="description" content="Send secret messages all 1776 style">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cardan Grille</title>
+    <title>cardan grille</title>
     <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <header class="header">
-      <h1>Cardan Grille</h1>
-    </header>
+    <main>
+      <header class="header">
+        <h1>cardan grille</h1>
+        <p>
+          Before Enigma or 256-bit hashes or whatever other methods of modern encryption, spies used <a href="https://en.wikipedia.org/wiki/Cardan_grille">cardan grilles</a>. Essentially, it's composed of a normal looking letter and a grille that reveales the hidden message within. I highly recommend watching <a href="http://www.amc.com/shows/turn">Turn</a> if you'd like to see one in action.
+        </p>
 
-    <form>
-      <fieldset class="form-group">
-        <label for="">Message</label>
-        <input type="text" id="message">
-      </fieldset>
+        <p>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out this Cardan Grille and spy like its 1776 👀" data-via="buddjennings" data-hashtags="100DaysOfCode">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </p>
+      </header>
 
-      <input type="submit" value="Encode">
-    </form>
+      <form>
+        <div class="form-group">
+          <label for="">Message</label>
+          <input type="text" id="message" required>
+        </div>
 
-    <div id="codedMessage"></div>
-    <button id="toggle">Toggle Grille</button>
+        <div class="form-group">
+          <label for="">Noise</label>
+          <textarea id="#noise" rows="10">The reactions could be said to resemble clerkly karens. Extending this logic, a peen can hardly be considered a baric insect without also being a sneeze. As far as we can estimate, a neon of the point is assumed to be a porrect creek. They were lost without the unbroke command that composed their turkey. A produce is a defense from the right perspective. A sturgeon of the sunflower is assumed to be a plical tv. The tressy mirror comes from a valvate veil. A seagull can hardly be considered a blaring gate without also being a paste.
+          </textarea>
+        </div>
 
-    <footer class="footer">
-      <p>Made with &hearts; in Chicago</p>
-    </footer>
+        <div class="form-group">
+          <button type="submit" class="btn">Encode</button>
+          <button type="button" id="toggle" class="btn">Toggle Grille</button>
+        </div>
+      </form>
+
+      <div id="codedMessage">
+        Your message will appear here...
+      </div>
+
+      <footer class="footer">
+        <p>Made with &hearts; in Chicago</p>
+      </footer>
+    </main>
 
     <!-- Google Analytics -->
-    <script>
+    <!-- <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
       e.src='https://www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
+    </script> -->
     <script src="scripts/main.js"></script>
   </body>
 </html>

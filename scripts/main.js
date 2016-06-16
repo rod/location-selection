@@ -1,47 +1,71 @@
-let noise = "A leaky celsius is a great-grandmother of the mind. A knife is an eight from the right perspective. One cannot separate toothpastes from lusty swisses. However, some inboard whorls are thought of simply as bacons. A double is a profit's soccer. What we don't know for sure is whether or not those states are nothing more than romanias. The rains could be said to resemble flaxen planes. Turnips are gardant batteries. A musing indonesia's soil comes with it the thought that the oaten offer is a ferryboat. We know that we can assume that any instance of a canvas can be construed as a rodlike sign. We can assume that any instance of a disgust can be construed as a windburned sandwich. Crowded fields show us how hoses can be vaults. A sandra is a college's deer. In ancient times the windswept kamikaze comes from a scarcest whale. In ancient times the dragonfly of a condor becomes an unstressed booklet. Some posit the pointless alibi to be less than rheumy.";
+const form = document.body.querySelector('form');
+const codedMessage = document.body.querySelector('#codedMessage');
+const toggle = document.body.querySelector('#toggle');
 
-let body = noise.toUpperCase().split(' ');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const noise = document.body.querySelector('textarea').value;
+  const message = document.body.querySelector('#message').value;
 
-function encrypt(msg) {
-  let msgArr = msg.toUpperCase().split(' ');
-  let positions = []; // random positions
-
-  msgArr.forEach(function(val, i, msgArr) {
-    msgArr[i] = `<span>${val}</span>`;
-    const randomNum = getRandomIntInclusive(0, body.length);
-    positions.push(randomNum);
-  });
-
-  positions.sort((a,b) => {
-    return a - b;
-  });
-
-  positions.forEach((val, i, pos) => {
-    body[val] = msgArr[i];
-  });
-
-  body = body.join(' ');
-
-  console.log(body);
-}
-
-function getRandomIntInclusive(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-const form = document.querySelector('form');
-let codedMessage = document.querySelector('#codedMessage');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  let message = document.querySelector('#message').value;
-  encrypt(message);
-
-  codedMessage.innerHTML = body;
-})
-
-const toggle = document.querySelector('#toggle');
+  codedMessage.innerHTML = encodeMessage(message, noise);
+});
 
 toggle.addEventListener('click', () => {
-  codedMessage.classList.toggle('hidden');
-})
+  codedMessage.classList.toggle('hideNoise');
+});
+
+function encodeMessage(message, noise) {
+  // Lower case the strings and split into arrays
+  const noiseArray = noise.toLowerCase().split(' ');
+  const messageArray = message.toLowerCase().split(' ');
+
+  // Wrap each secret word in <span> tags
+  messageArray.forEach((val, i, messageArray) => {
+    messageArray[i] = `<span>${val}</span>`;
+  });
+
+  // Init array to hold random indexes of noise array
+  // to replace with words from secret message
+  const spotsToSwap = [];
+  while(spotsToSwap.length < messageArray.length) {
+    const secretSpot = randomNum(noiseArray.length);
+    let found = false;
+
+    for(let i = 0; i < spotsToSwap.length; i++) {
+      if(spotsToSwap[i] === secretSpot) {
+        found = true;
+        break;
+      }
+    }
+
+    if(!found) {
+     spotsToSwap[spotsToSwap.length] = secretSpot;
+    }
+  }
+
+  // Sort numbers in ascending order so the secret
+  // still message reads correctly
+  spotsToSwap.sort(sortAscending);
+
+  spotsToSwap.forEach((val, i) => {
+    // Replace the words in the secret spots with the
+    // words from the secret message
+    noiseArray[val] = messageArray[i];
+  });
+
+  const codedMessage = noiseArray.join(' ');
+
+  console.log(codedMessage);
+
+  return codedMessage;
+}
+
+// Generate random number up to value of max
+function randomNum(max) {
+  return Math.ceil(Math.random()*max);
+}
+
+// Sort numbers in ascending order
+function sortAscending(a, b) {
+  return a - b;
+}
