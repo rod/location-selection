@@ -21,8 +21,7 @@ main {
 }
 
 header {
-  margin: 4em 0;
-  padding: 0 1em;
+  padding: 4em 1rem;
   max-width: 30em;
   width: 100%;
 }
@@ -41,7 +40,7 @@ h1 {
   left: 0;
   max-height: 100%;
   overflow: visible;
-  z-index: -1;
+  // z-index: 0;
 }
 
 #time,
@@ -53,14 +52,16 @@ h1 {
 #time { right: 1rem; }
 .plug { left: 1rem; }
 
-#toggle {
+#zen {
   border: 2px solid $white;
   border-top: 0;
   cursor: pointer;
   display: inline-block;
+  left: 1rem;
   line-height: 1.5;
+  position: fixed;
   padding: 0 .5em;
-  margin-left: 1rem;
+  top: 0;
   opacity: 0.25;
   transition: $transition;
 
