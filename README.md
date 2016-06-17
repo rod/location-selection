@@ -5,7 +5,7 @@
 ### Install
 
 ```
-$ npm i -g --save-dev gulp
+$ npm install -g gulp
 $ npm install
 $ gulp serve
 ```
