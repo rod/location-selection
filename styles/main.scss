@@ -2,6 +2,7 @@
 
 $white: #fff;
 $black: #222;
+$red: #e23e3e;
 $transition: all 0.3s ease-in;
 
 html {
@@ -19,18 +20,79 @@ main {
   width: 100%;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  position: relative;
-}
-section,
-canvas {
-  height: 50%;
-  overflow: hidden;
+body {
+  background: $red;
+  color: $white;
+  font-family: 'work sans', sans-serif;
 }
 
-canvas {
-  max-height: 50%;
+main {
+  position: relative;
+}
+
+header {
+  margin: 4em 0;
+  padding: 0 1em;
+  max-width: 30em;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+
+  &:hover,
+  &:visited {
+    color: inherit;
+  }
+}
+
+h1 {
+  font-family: 'monoton';
+  font-size: 10vw;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+}
+
+#wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  max-height: 90%;
+  overflow: visible;
+  z-index: -1;
+}
+
+#time,
+.plug {
+  position: fixed;
+  bottom: 1rem;
+}
+
+#time { right: 1rem; }
+.plug { left: 1rem; }
+
+#toggle {
+  border: 2px solid $white;
+  border-top: 0;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.5;
+  padding: 0 .5em;
+  margin-left: 1rem;
+  opacity: 0.25;
+  transition: $transition;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.target {
+  opacity: 1;
+  transition: $transition;
+
+  &.hidden {
+    opacity: 0;
+  }
 }

@@ -1,49 +1,22 @@
 console.log('#100DaysOfCode: Day 2');
 
 var ctx = document.body.querySelector('#wave');
-var ctx2 = document.body.querySelector('#donut');
 
-var ascii = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-
-var name = 'Muhammad'.replace(/\W+/g, '').toUpperCase();
-var nameArr = name.split('');
-var namePts = [];
-
-var vowels = [];
-var consos = [];
-
-nameArr.forEach(function(ltr, i, nums) {
-  namePts.push(ascii.indexOf(ltr) + 1);
-
-  if (ltr === 'A' || ltr === 'E' || ltr === 'I' || ltr === 'O' || ltr === 'U') {
-    vowels.push(ltr);
-  } else {
-    consos.push(ltr);
-  }
-});
-
-console.log(vowels, consos);
-
-var myPieChart = new Chart(ctx2,{
-    type: 'doughnut',
-    labels: ['Vowels', 'Consonants'],
-    data: {
-      datasets: [{
-        data: [3, 5],
-      }],
-    },
-});
-
-
-var myLineChart = new Chart(ctx, {
+var wave = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: nameArr,
+    labels: ['H', 'H', 'M', 'M', 'S', 'S'],
     datasets: [
       {
-        data: namePts,
+        borderColor: '#F5D76E',
+        backgroundColor: 'rgba(245, 215, 110, 0.8)',
+        borderWidth: 4,
+        borderCapStyle: 'round',
+        pointRadius: 0,
+        lineTension: 0.4,
+        data: moment().format('HHmmss').split(''),
       },
-    ]
+    ],
   },
   options: {
     legend: {
@@ -51,8 +24,32 @@ var myLineChart = new Chart(ctx, {
     },
     scales: {
       xAxes: [{ display: false }],
-      yAxes: [{ display: false }],
+      yAxes: [{
+        display: false,
+        ticks: {
+          max: 9,
+        },
+      }],
     },
     maintainAspectRatio: false,
+    animation: {
+      duration: 1000,
+      easing: 'easeOutQuint',
+    },
   },
+});
+
+function refresh() {
+  document.body.querySelector('#time').innerHTML = moment().format('HH:mm:ss');
+
+  wave.data.datasets[0].data = moment().format('HHmmss').split('');
+  wave.update();
+}
+
+setInterval(refresh, 1000);
+
+document.body.querySelector('#toggle').addEventListener('click', function() {
+  document.body.querySelectorAll('.target').forEach(function(el) {
+    el.classList.toggle("hidden");
+  });
 });

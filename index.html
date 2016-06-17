@@ -3,40 +3,39 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Send secret messages all 1776 style">
+  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Weatherwave</title>
+  <title>Timewave</title>
   <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Monoton|Work+Sans" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
   <main>
-    <section>
-      <header class="header">
-        <h1>Weatherwave</h1>
-        <p class="lead">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed vitae perspiciatis maxime, commodi rerum! Aspernatur optio veniam a nobis illum culpa sed, placeat soluta praesentium? Et qui ipsa, a optio.
-        </p>
+    <small id="toggle">Toggle Clock</small>
 
-        <p>
-          <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out this Cardan Grille and spy like its 1776 👀" data-via="buddjennings" data-hashtags="100DaysOfCode">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <header class="header target">
+      <h1>Timewave</h1>
+      <p class="lead">
+        If you're gonna watch a clock, watch a clock that waves. This attempt at telling time is brought to you by good people from <a href="http://www.chartjs.org/" target="_blank">Chart.js</a> &amp; <a href="http://momentjs.com/" target="_blank">Moment.js</a>
+      </p>
 
-          <iframe src="https://ghbtns.com/github-btn.html?user=rod&type=follow" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-        </p>
-      </header>
+      <p>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Timewave" data-via="buddjennings" data-hashtags="100DaysOfCode">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-      <footer class="footer">
-        <p>Made with &hearts; by <a href="http://rod.today">Rod</a></p>
-      </footer>
-    </section>
+        <iframe src="https://ghbtns.com/github-btn.html?user=rod&type=follow" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+      </p>
+    </header>
 
     <canvas id="wave"></canvas>
-    <canvas id="donut"></canvas>
+    <small id="time" class="target"></small>
+    <small class="plug target">Made with &hearts; by <a href="http://rod.today">Rod</a></small>
 
   </main>
   <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js" type=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
   <script src="scripts/main.js"></script>
 
 </body>
