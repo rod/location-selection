@@ -34,6 +34,14 @@ h1 {
   margin: 0;
 }
 
+kbd {
+  font-size: 80%;
+  background: rgba($black, .5);
+  border-radius: 2px;
+  color: $white;
+  padding: 0 4px;
+}
+
 #wave {
   position: fixed;
   bottom: 0;
