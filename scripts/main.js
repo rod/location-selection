@@ -1,71 +1,58 @@
-var form = document.body.querySelector('form');
-var codedMessage = document.body.querySelector('#codedMessage');
-var toggle = document.body.querySelector('#toggle');
+console.log('#100DaysOfCode: Day 2');
 
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
-  var noise = document.body.querySelector('textarea').value;
-  var message = document.body.querySelector('#message').value;
+var ctx = document.body.querySelector('#wave');
+var ctx2 = document.body.querySelector('#donut');
 
-  codedMessage.innerHTML = encodeMessage(message, noise);
-});
+var ascii = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-toggle.addEventListener('click', function () {
-  codedMessage.classList.toggle('hideNoise');
-});
+var name = 'Muhammad'.replace(/\W+/g, '').toUpperCase();
+var nameArr = name.split('');
+var namePts = [];
 
-function encodeMessage(message, noise) {
-  // Lower case the strings and split into arrays
-  var noiseArray = noise.toLowerCase().split(' ');
-  var messageArray = message.toLowerCase().split(' ');
+var vowels = [];
+var consos = [];
 
-  // Wrap each secret word in <span> tags
-  messageArray.forEach(function (val, i, messageArray) {
-    messageArray[i] = '<span>' + val + '</span>';
-  });
+nameArr.forEach(function(ltr, i, nums) {
+  namePts.push(ascii.indexOf(ltr) + 1);
 
-  // Init array to hold random indexes of noise array
-  // to replace with words from secret message
-  var spotsToSwap = [];
-  while (spotsToSwap.length < messageArray.length) {
-    var secretSpot = randomNum(noiseArray.length);
-    var found = false;
-
-    for (var i = 0; i < spotsToSwap.length; i++) {
-      if (spotsToSwap[i] === secretSpot) {
-        found = true;
-        break;
-      }
-    }
-
-    if (!found) {
-      spotsToSwap[spotsToSwap.length] = secretSpot;
-    }
+  if (ltr === 'A' || ltr === 'E' || ltr === 'I' || ltr === 'O' || ltr === 'U') {
+    vowels.push(ltr);
+  } else {
+    consos.push(ltr);
   }
+});
 
-  // Sort numbers in ascending order so the secret
-  // still message reads correctly
-  spotsToSwap.sort(sortAscending);
+console.log(vowels, consos);
 
-  spotsToSwap.forEach(function (val, i) {
-    // Replace the words in the secret spots with the
-    // words from the secret message
-    noiseArray[val] = messageArray[i];
-  });
+var myPieChart = new Chart(ctx2,{
+    type: 'doughnut',
+    labels: ['Vowels', 'Consonants'],
+    data: {
+      datasets: [{
+        data: [3, 5],
+      }],
+    },
+});
 
-  var codedMessage = noiseArray.join(' ');
 
-  console.log(codedMessage);
-
-  return codedMessage;
-}
-
-// Generate random number up to value of max
-function randomNum(max) {
-  return Math.ceil(Math.random() * max);
-}
-
-// Sort numbers in ascending order
-function sortAscending(a, b) {
-  return a - b;
-}
+var myLineChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: nameArr,
+    datasets: [
+      {
+        data: namePts,
+      },
+    ]
+  },
+  options: {
+    legend: {
+      display: false,
+    },
+    scales: {
+      xAxes: [{ display: false }],
+      yAxes: [{ display: false }],
+    },
+    maintainAspectRatio: false,
+  },
+});

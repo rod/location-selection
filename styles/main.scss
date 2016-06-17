@@ -12,100 +12,25 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  background: $black;
-  color: $white;
-  font-family: monospace;
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
-}
-
-a,
-a:visited {
-  color: $white;
-  transition: $transition;
-
-  &:hover {
-    background: $white;
-    color: $black;
-  }
+html,
+body,
+main {
+  height: 100%;
+  width: 100%;
 }
 
 main {
-  margin: 0 auto;
-  max-width: 40em;
-  padding: 0 1em;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+section,
+canvas {
+  height: 50%;
+  overflow: hidden;
 }
 
-header,
-footer {
-  text-align: center;
-  margin: 4em 0;
-}
-
-footer {
-  border-top: 1px solid $white;
-}
-
-form {
-  margin-bottom: 4em;
-}
-
-form,
-label,
-input,
-textarea {
-  display: block;
-  width: 100%;
-}
-
-textarea {
-  resize: vertical;
-}
-
-label,
-.btn {
-  text-transform: lowercase;
-  font-weight: bold;
-}
-
-input,
-textarea,
-.btn {
-  border: 1px solid $white;
-  border-radius: 0;
-  background: transparent;
-  color: $white;
-  padding: 1em;
-}
-
-.btn {
-  display: inline-block;
-  line-height: 2;
-  padding: 0 1em;
-  transition: $transition;
-  width: auto;
-
-  &:hover {
-    background: $white;
-    color: $black;
-  }
-}
-
-.form-group {
-  margin-bottom: 1em;
-}
-
-.hideNoise {
-  background: $white;
-  transition: $transition;
-
-  span {
-    background: $black;
-  }
-}
-
-.lead {
-  font-size: 1.2em;
+canvas {
+  max-height: 50%;
 }

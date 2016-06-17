@@ -1,5 +1,5 @@
 {
-  "name": "cardan-grille",
+  "name": "weatherwave",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rod/cardan-grille.git"
+    "url": "git+https://github.com/rod/weatherwave.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rod/cardan-grille/issues"
+    "url": "https://github.com/rod/weatherwave/issues"
   },
-  "homepage": "https://github.com/rod/cardan-grille#readme"
+  "homepage": "https://github.com/rod/weatherwave#readme"
 }
