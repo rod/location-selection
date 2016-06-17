@@ -1,0 +1,16 @@
+$white: #fff;
+$black: #222;
+$transition: all 0.3s ease-in;
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+a,
+a:visited {
+  color: inherit;
+}

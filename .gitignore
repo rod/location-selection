@@ -1,11 +1,1 @@
-<<<<<<< HEAD
 node_modules
-dist
-.tmp
-bower_components
-test/bower_components
-=======
-.sass-cache
-*.css.map
-node_modules/
->>>>>>> 7aae3e24913a0f09b19ab1424fcde8542ca6799d

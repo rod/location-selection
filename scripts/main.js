@@ -1,5 +1,3 @@
-console.log('#100DaysOfCode: Day 2');
-
 var ctx = document.body.querySelector('#wave');
 
 var wave = new Chart(ctx, {

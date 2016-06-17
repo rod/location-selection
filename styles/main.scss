@@ -1,17 +1,7 @@
 @import 'normalize';
+@import 'base';
 
-$white: #fff;
-$black: #222;
 $red: #e23e3e;
-$transition: all 0.3s ease-in;
-
-html {
-  box-sizing: border-box;
-}
-
-* {
-  box-sizing: inherit;
-}
 
 html,
 body,
@@ -35,15 +25,6 @@ header {
   padding: 0 1em;
   max-width: 30em;
   width: 100%;
-}
-
-a {
-  color: inherit;
-
-  &:hover,
-  &:visited {
-    color: inherit;
-  }
 }
 
 h1 {
