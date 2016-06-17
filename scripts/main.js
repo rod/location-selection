@@ -25,7 +25,7 @@ var wave = new Chart(ctx, {
       yAxes: [{
         display: false,
         ticks: {
-          max: 10,
+          max: 9,
           min: 0,
         },
       }],

@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rod/weatherwave.git"
+    "url": "git+https://github.com/rod/timewave.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rod/weatherwave/issues"
+    "url": "https://github.com/rod/timewave/issues"
   },
-  "homepage": "https://github.com/rod/weatherwave#readme"
+  "homepage": "https://github.com/rod/timewave#readme"
 }
