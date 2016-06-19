@@ -1,6 +1,6 @@
 # [timewave](http://http://rod.today/timewave)
 
-> #100DaysOfCode: Day 2
+> 100 Days Of Code: Day 2
 
 ### Install
 
